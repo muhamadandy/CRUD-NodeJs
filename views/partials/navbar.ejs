@@ -1,0 +1,59 @@
+<nav
+  class="bg-white text-black py-4 flex justify-center shadow-b shadow-md sticky top-0"
+>
+  <div class="w-8/12 flex justify-between">
+    <a href="/" class="text-lg font-semibold"
+      ><i class="fas fa-laptop-code"></i> CRUD</a
+    >
+    <div class="hidden md:flex items-center space-x-4">
+      <a href="/" class="hover:border-b border-black"
+        ><i class="fas fa-tachometer-alt text-blue-500"></i> Dashboard</a
+      >
+      <a href="/add" class="hover:border-b border-black"
+        ><i class="fa-solid fa-user-plus text-blue-500"></i> Add User</a
+      >
+      <a href="#" class="hover:border-b border-black"
+        ><i class="fa-solid fa-circle-info text-blue-500"></i> About</a
+      >
+      <a href="#" class="hover:border-b border-black"
+        ><i class="fa-solid fa-envelope text-blue-500"></i> Contact</a
+      >
+    </div>
+    <div class="md:hidden text-xl">
+      <i id="toggleSidebar" class="fas fa-bars hover:cursor-pointer"></i>
+    </div>
+  </div>
+</nav>
+<!-- Sidebar -->
+<div class="flex">
+  <div
+    class="w-1/2 md:hidden bg-gray-800 text-white py-4 transform -translate-x-full transition-transform duration-300 ease-in-out fixed h-full z-50 top-0"
+    id="sidebar"
+  >
+    <div class="fixed top-4 right-4">
+      <i
+        id="close-sidebar"
+        class="fas fa-times text-xl hover:cursor-pointer"
+      ></i>
+    </div>
+    <div class="text-center mb-8">
+      <a href="/" class="text-lg font-semibold"
+        ><i class="fas fa-laptop-code"></i> CRUD</a
+      >
+    </div>
+    <nav>
+      <a href="/" class="block py-2 px-4 hover:bg-gray-700"
+        ><i class="fas fa-tachometer-alt text-blue-500"></i> Dashboard</a
+      >
+      <a href="/add" class="block py-2 px-4 hover:bg-gray-700"
+        ><i class="fa-solid fa-user-plus text-blue-500"></i> Add User</a
+      >
+      <a href="#" class="block py-2 px-4 hover:bg-gray-700"
+        ><i class="fa-solid fa-circle-info text-blue-500"></i> About</a
+      >
+      <a href="#" class="block py-2 px-4 hover:bg-gray-700"
+        ><i class="fa-solid fa-envelope text-blue-500"></i> Contact</a
+      >
+    </nav>
+  </div>
+</div>
