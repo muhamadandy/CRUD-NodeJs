@@ -9,7 +9,7 @@ const app = express();
 //middleware session
 app.use(
   session({
-    secret: process.env.SECRET_KEY, // Ganti dengan kunci rahasia yang lebih aman
+    secret: "mycrud",
     resave: false,
     saveUninitialized: true,
   })
