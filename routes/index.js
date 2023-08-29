@@ -115,6 +115,10 @@ router.post("/add", upload, async (req, res) => {
   try {
     const newUser = new User({ name, email, phone, image });
     await newUser.save();
+
+    const uploadsDirectory = path.join(__dirname, "uploads");
+    fs.chmodSync(uploadsDirectory, 0o755);
+
     req.session.message = {
       message: "User added successfully",
     };
@@ -152,6 +156,9 @@ router.post("/update/:id", upload, async (req, res) => {
     if (!updatedUser) {
       return res.redirect("/");
     }
+
+    const uploadsDirectory = path.join(__dirname, "uploads"); // Ganti dengan path yang sesuai
+    fs.chmodSync(uploadsDirectory, 0o755); // Atur izin akses
 
     req.session.message = { message: "User updated successfully" };
     res.redirect("/");
